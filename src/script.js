@@ -206,6 +206,7 @@ function verificarLimiteParcelas() {
     
         // Botão para refazer a simulação
         document.getElementById('refazer').addEventListener('click', function () {
+            location.reload();
             formDadosPessoais.style.display = 'block';
             formDadosVeiculo.style.display = 'none';
             resultadoSimulacao.style.display = 'none';
