@@ -9,10 +9,21 @@ function apenasNumeros(event) {
         event.preventDefault();
     }
 }
+
+       // Permitir apenas letras e acentos
+function validarNome(input) {
+    const valorFiltrado = input.value.replace(/[^a-zA-Z0-9 áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ'-]/g, '');
+    if (input.value !== valorFiltrado) {
+        input.value = valorFiltrado;
+    }
+}
     
     document.getElementById('parcelas').addEventListener('keypress', apenasNumeros);
     document.getElementById('parcelas').addEventListener('input', verificarLimiteParcelas);
-    document.getElementById('juros').addEventListener('keypress', apenasNumeros);   
+    document.getElementById('juros').addEventListener('keypress', apenasNumeros);
+    document.getElementById('nome').addEventListener('input', function (e) {
+        validarNome(e.target);
+    });  
     document.getElementById('nome').addEventListener('input', function (e) {
     e.target.value = e.target.value.replace(/[0-9]/g, '');
     });
