@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento de Veículos</title>
+    <link rel="stylesheet" href="src/simulador.css">
+    
+</head>
+<body>
+    <div id="menu">
+        <nav>
+            <ul class="nav-list">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="src/logosite.png" alt="logo do site" width="300px" height="80px">
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        
+        <!-- Formulário de Dados Pessoais -->
+        <div class="simulador" id="dados-pessoais">
+            <div class="header-simulador">
+                <div class="textos">
+                    <h2>Simule o financiamento de um veículo</h2>
+                    <p>Vamos começar, forneça os seguintes dados</p>
+                </div>
+                <div class="logo">
+                    <img src="src/logosite-azul.png" alt="Logo do site" class="logo-site" >
+                </div>
+            </div>
+            <form id="form-dados-pessoais">
+                <div class="form-group">
+                    <div class="form-item">
+                        <span>Nome completo</span>
+                        <input type="text" id="nome" placeholder="Nome completo">
+                    </div>
+                    <div class="form-item">
+                        <span>Data de Nascimento</span>
+                        <input type="date" id="dataNascimento" placeholder="Data de Nascimento">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-item">
+                        <span>E-mail</span>
+                        <input type="email" id="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-item">
+                        <span>CPF</span>
+                        <input id="CPF" type="text" placeholder="CPF">
+                    </div>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+        </div>
+
+
+        <!-- Formulário dos Dados do Veículo -->
+        <div class="simulador" id="dados-veiculo" style="display: none;">
+            <div class="header-simulador">
+                <div class="textos">
+                    <h2>Agora só precisamos <br>de alguns dados</h2>
+                </div>
+                <div class="logo">
+                    <img src="src/logosite-azul.png" alt="Logo do site" class="logo-site" >
+                </div>
+            </div>
+            <form id="form-dados-veiculo">
+                <div class="form-group">
+                    <div class="form-item">
+                        <span>Vamos falar sobre qual modelo do veículo você quer financiar:</span>
+                        <select id="modeloCarro" >
+                            <option value="" disabled selected>Escolha o modelo do carro</option>
+                        </select>                    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-item">
+                        <span>Valor total do carro</span>
+                        <input type="text" id="valorTotal" placeholder="Valor total do carro" >
+                    </div>
+                    <div class="form-item">
+                        <span>Parcelas</span>
+                        <input type="number" id="parcelas" placeholder="Parcelas" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-item">
+                        <span>Entrada</span>
+                        <input type="text" id="entrada" placeholder="Entrada" >
+                    </div>
+                    <div class="form-item">
+                        <span>Juros ao mês (%)</span>
+                        <input type="number" id="juros" placeholder="Juros (%)" step="0.01"  >
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" id="voltar">Voltar</button>
+                    <button type="submit" id="fazerSimulação">Simular</button>
+                </div>
+            </form>
+        </div>
+
+            
+        <!-- Resultado da Simulação -->
+        <div class="simulador resultado" id="resultado-simulacao">
+            <div class="resultado-header">
+                <img src="src/logosite-azul.png" alt="Logo do site" class="logo-centro">
+            </div>
+            <h2 class="animacao-titulo">Resultado da Simulação</h2>
+            <hr class="linha-separadora">
+            <div class="conteudo">
+                <p>Valor do Veículo: R$ <span id="resValor"></span></p>
+                <p>Entrada: R$ <span id="resEntrada"></span></p>
+                <p>Valor Financiado: R$ <span id="resFinanciado"></span></p>
+                <p>Valor das Parcelas: <span id="resParcelas"></span> x R$ <span id="resParcela"></span></p>
+                <p>Total a ser pago (em parcelas): R$ <span id="resparcelasTotal"></span></p>
+                <p>Valor total do Veículo: R$ <span id="resTotal"></span></p>
+            </div>
+            <button id="refazer" class="animacao-botao">Refazer Simulação</button>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <div id="rodape">
+        <footer>
+            <center>
+                <h3 class="fonterodape"> Prime Finance - Financiamento de Veículos</h3>
+                <h4 class="fonterodape"> Interdisciplinar da Etec Carapicuíba elaborado pelo 2° ano de Desenvolvimento de Sistemas<br>
+                &copy;CPS - Centro Paula Souza - 2024 </h4>
+            </center>
+        </footer>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

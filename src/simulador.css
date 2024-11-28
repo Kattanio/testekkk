@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+span {
+    font-weight: bold;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0;
+}
+
+#menu {
+    background-color: #323C8F;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.container {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+/* Simulador */
+.simulador {
+    width: 100%;
+    background: #e4e4fc;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 800px; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.linha-separadora {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    margin: 20px 0;
+}
+
+
+.simulador h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.simulador p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.header-simulador {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-simulador .textos h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: left;
+}
+
+.header-simulador .textos p {
+    margin: 5px 0 0;
+    color: #666;
+    text-align: left;
+}
+
+.logo-site {
+    max-width: 300px;
+    height: auto;
+}
+
+
+.form-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.form-item {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-item span {
+    margin-bottom: 5px; 
+    font-size: 0.9rem;
+}
+
+.form-item input, .form-item select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+
+        .header-simulador {
+            flex-direction: column; 
+            align-items: center; 
+        }
+    
+        .logo-site {
+            margin-top: 30px;
+            max-width: 320px; 
+        }
+    
+        .form-group {
+            flex-direction: column; 
+            gap: 10px;
+        }
+    
+        .form-item {
+            width: 100%; 
+        }
+
+       
+
+}
+
+
+
+
+button {
+    width: 50%;
+    background: linear-gradient(90deg, #fccc24, #ff9a00);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; 
+    margin: auto; 
+    margin-top: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+
+}
+
+.button-group button {
+    flex: 1; 
+    max-width: 200px; 
+}
+
+
+/* Resultado da simulação */
+#resultado-simulacao {
+    display: none;
+}
+#titulo{
+    padding-bottom: 2%;
+}
+
+.resultado-header {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.logo-centro {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto; 
+}
+
+
+/* Rodapé */
+#rodape {
+    background-color: #323C8F;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.fonterodape {
+    color: rgb(212, 212, 212);
+}
+
+
+/* Links */
+a:link, a:visited {
+    color: #ffffff;
+    font-size: 23px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-family: system-ui;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:active {
+    color: #ffffff;
+}
+
+#logo {
+    padding-left: 10%;
+}
+
+
+
