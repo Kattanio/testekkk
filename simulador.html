@@ -37,21 +37,21 @@
                 <div class="form-group">
                     <div class="form-item">
                         <span>Nome completo</span>
-                        <input type="text" id="nome" placeholder="Nome completo" >
+                        <input type="text" id="nome" placeholder="Nome completo" required>
                     </div>
                     <div class="form-item">
                         <span>Data de Nascimento</span>
-                        <input type="date" id="dataNascimento" placeholder="Data de Nascimento" >
+                        <input type="date" id="dataNascimento" placeholder="Data de Nascimento" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-item">
                         <span>E-mail</span>
-                        <input type="email" id="email" placeholder="E-mail" >
+                        <input type="email" id="email" placeholder="E-mail" required>
                     </div>
                     <div class="form-item">
                         <span>CPF</span>
-                        <input id="CPF" type="text" placeholder="CPF" >
+                        <input id="CPF" type="text" placeholder="CPF" required>
                     </div>
                 </div>
                 <button type="submit">Continuar</button>
@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <div class="form-item">
                         <span>Vamos falar sobre qual modelo do veículo você quer financiar:</span>
-                        <select id="modeloCarro">
+                        <select id="modeloCarro" required>
                             <option value="" disabled selected>Escolha o modelo do carro</option>
                         </select>                    
                     </div>
@@ -81,21 +81,21 @@
                 <div class="form-group">
                     <div class="form-item">
                         <span>Valor total do carro</span>
-                        <input type="text" id="valorTotal" placeholder="Valor total do carro" >
+                        <input type="text" id="valorTotal" placeholder="Valor total do carro" required>
                     </div>
                     <div class="form-item">
                         <span>Entrada</span>
-                        <input type="text" id="entrada" placeholder="Entrada" >
+                        <input type="text" id="entrada" placeholder="Entrada" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-item">
                         <span>Parcelas</span>
-                        <input type="number" id="parcelas" placeholder="Parcelas" >
+                        <input type="number" id="parcelas" placeholder="Parcelas" required>
                     </div>
                     <div class="form-item">
                         <span>Juros ao mês (%)</span>
-                        <input type="number" id="juros" placeholder="Juros (%)" step="0.01" >
+                        <input type="number" id="juros" placeholder="Juros (%)" step="0.01" required>
                     </div>
                 </div>
                 <div class="button-group">
