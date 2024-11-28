@@ -25,6 +25,11 @@ body {
     box-sizing: border-box;
 }
 
+#logo {
+    padding-left: 10%;
+}
+
+
 .container {
     flex: 1; 
     display: flex; 
@@ -136,7 +141,7 @@ body {
     font-size: 0.9rem;
 }
 
-.form-item input, .form-item select {
+.form-item input{
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -203,7 +208,6 @@ button:hover {
 }
 
 
-
 .button-group {
     display: flex;
     justify-content: space-between; 
@@ -221,6 +225,7 @@ button:hover {
 #resultado-simulacao {
     display: none;
 }
+
 #titulo{
     padding-bottom: 2%;
 }
@@ -280,9 +285,6 @@ a:active {
     color: #ffffff;
 }
 
-#logo {
-    padding-left: 10%;
-}
 
 
 

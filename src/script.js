@@ -10,13 +10,12 @@ function apenasNumeros(event) {
     }
 }
     
-document.getElementById('parcelas').addEventListener('keypress', apenasNumeros);
-document.getElementById('parcelas').addEventListener('input', verificarLimiteParcelas);
-document.getElementById('juros').addEventListener('keypress', apenasNumeros);   
-document.getElementById('nome').addEventListener('input', function (e) {
+    document.getElementById('parcelas').addEventListener('keypress', apenasNumeros);
+    document.getElementById('parcelas').addEventListener('input', verificarLimiteParcelas);
+    document.getElementById('juros').addEventListener('keypress', apenasNumeros);   
+    document.getElementById('nome').addEventListener('input', function (e) {
     e.target.value = e.target.value.replace(/[0-9]/g, '');
-});
-
+    });
 
 
    
@@ -35,7 +34,7 @@ document.getElementById('nome').addEventListener('input', function (e) {
     });
 
 
-    function validarCPF(cpf) {
+function validarCPF(cpf) {
         cpf = cpf.replace(/\D/g, ''); 
     
         if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
@@ -129,7 +128,7 @@ function verificarLimiteParcelas() {
 
 
     /*   Ínicio do Simulador De Financiamento  */
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
         const formDadosPessoais = document.getElementById('dados-pessoais');
         const formDadosVeiculo = document.getElementById('dados-veiculo');
         const resultadoSimulacao = document.getElementById('resultado-simulacao');
@@ -203,28 +202,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
   // Lista dos modelos de carro   
-const modelosCarros = [
-    "Chevrolet Onix",
-    "Ford Ka",
-    "Volkswagen Gol",
-    "Toyota Corolla",
-    "Honda Civic",
-    "Hyundai HB20",
-    "Fiat Argo",
-    "Renault Kwid",
-    "Jeep Compass",
-    "Nissan Kicks"
-];
+    const modelosCarros = [
+        "Chevrolet Onix",
+        "Ford Ka",
+        "Volkswagen Gol",
+        "Toyota Corolla",
+        "Honda Civic",
+        "Hyundai HB20",
+        "Fiat Argo",
+        "Renault Kwid",
+        "Jeep Compass",
+        "Nissan Kicks"
+    ];
 
-// Referência ao select
-const selectCarros = document.getElementById("modeloCarro");
+    // Referência ao select
+    const selectCarros = document.getElementById("modeloCarro");
 
-// Adicionar opções dinamicamente
-modelosCarros.forEach(modelo => {
-    const option = document.createElement("option");
-    option.value = modelo;
-    option.textContent = modelo;
-    selectCarros.appendChild(option);
-});
+    // Adicionar opções dinamicamente
+    modelosCarros.forEach(modelo => {
+        const option = document.createElement("option");
+        option.value = modelo;
+        option.textContent = modelo;
+        selectCarros.appendChild(option);
+    });
+
+
 
 /* Fim JS */
