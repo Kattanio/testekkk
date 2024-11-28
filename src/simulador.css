@@ -54,6 +54,7 @@ body {
     max-width: 800px; 
 }
 
+/* Animações */
 @keyframes fadeIn {
     0% {
         opacity: 0;
